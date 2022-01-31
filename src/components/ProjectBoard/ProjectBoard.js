@@ -4,7 +4,7 @@ import Backlog from "./Backlog";
 import {connect} from "react-redux";
 import PropTypes from "prop-types"
 import {getBacklog} from "../../actions/backlogActions"
-import { DH_NOT_SUITABLE_GENERATOR } from "constants";
+
 
 class ProjectBoard extends Component {
 
@@ -31,7 +31,7 @@ class ProjectBoard extends Component {
     const {project_tasks} = this.props.backlog;
     const {errors} = this.state;
     const boardAlgorithm = (errors,project_tasks) =>{
-      if(project_tasks.length == 0){
+      if(project_tasks.length === 0){
         if(errors.projectNotFound){
           return (
             <div className="alert alert-danger text-center" role ="alert">{errors.projectNotFound}</div>

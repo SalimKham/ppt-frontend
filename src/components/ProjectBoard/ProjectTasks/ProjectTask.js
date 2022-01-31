@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import PropTypes from "prop-types";
+
 import {deleteTask} from "../../../actions/backlogActions";
 
 class ProjectTask extends Component {
@@ -25,9 +25,14 @@ class ProjectTask extends Component {
        priorityText = "MEDIUM";
        break;
       }
-       case 3 : 
-       priority_class = "bg-info text-light";
-       priorityText = "LOW"
+      case 3: {
+        priority_class = "bg-info text-light";
+        priorityText = "LOW"
+        break
+      }
+      default:
+        break
+        
        
     }
 
